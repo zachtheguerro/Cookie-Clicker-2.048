@@ -15015,7 +15015,7 @@ Game.Launch=function()
 		Game.OpenSesame=function()
 		{
 			var str='';
-			str+='<div class="icon" style="position:absolute;left:-1px;top:-1px;background-position:'+(-10*48)+'px '+(-6*48)+'px;"></div>'; //-9,-6
+			str+='<div class="icon" style="position:absolute;left:-9px;top:-6px;background-position:'+(-2*50)+'px '+(-2*50)+'px;"></div>'; //-10, 48|-6,48
 			
 			str+='<div id="devConsoleContent">';
 			str+='<div class="title" style="font-size:14px;margin:6px;"></div>';
