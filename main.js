@@ -15015,8 +15015,7 @@ Game.Launch=function()
 		Game.OpenSesame=function()
 		{
 			var str='';
-			str+='<div class="transbox" style="position:absolute;left:-9px;top:-6px;background-position:'+(-10*48)+'px '+(-6*48)+'px;"></div>';
-			str+='<div style="transbox" id="fpsCounter"></div>';
+			str+='<div class="icon" style="position:absolute;left:-9px;top:-6px;background-position:'+(-10*48)+'px '+(-6*48)+'px;"></div>';
 			
 			str+='<div id="devConsoleContent">';
 			str+='<div class="title" style="font-size:14px;margin:6px;"></div>';
@@ -15828,20 +15827,6 @@ Game.Launch=function()
 		
 		if (Game.sesame)
 		{
-			//fps counter and graph
-			Game.previousFps=Game.currentFps;
-			Game.currentFps=Game.getFps();
-				var ctx=Game.fpsGraphCtx;
-				ctx.drawImage(Game.fpsGraph,-1,0);
-				ctx.fillStyle='rgb('+Math.round((1-Game.currentFps/Game.fps)*128)+',0,0)';
-				ctx.fillRect(128-1,0,1,64);
-				ctx.strokeStyle='#fff';
-				ctx.beginPath();
-				ctx.moveTo(128-1,(1-Game.previousFps/Game.fps)*64);
-				ctx.lineTo(128,(1-Game.currentFps/Game.fps)*64);
-				ctx.stroke();
-			
-			l('fpsCounter').textContent=Game.currentFps+' fps';
 			var str='';
 			for (var i in Timer.labels) {str+=Timer.labels[i];}
 			if (Game.debugTimersOn) l('debugLog').style.display='block';
