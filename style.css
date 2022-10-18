@@ -3107,9 +3107,9 @@ a.smallWhiteButton
 	height:32px;
 	overflow:hidden;
 	cursor:pointer;
-	opacity:0.5;
+	opacity:0;
 	text-align:center;
-	transition:opacity 0.4s;
+	transition:opacity 0s;
 }
 #devConsole:hover
 {
@@ -3316,5 +3316,11 @@ STOP THE FANCY
 	-webkit-filter:none!important;
 }
 
+#draggythingky {
+}
+
+#draggythingkyheader {
+  cursor: move;
+}
 
 /**{overflow:hidden!important;}*/
